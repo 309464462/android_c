@@ -14,6 +14,9 @@
 #
 LOCAL_PATH := $(call my-dir)
 
+#
+#模块1
+#
 include $(CLEAR_VARS)
 
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/include  \
@@ -22,5 +25,19 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/include  \
 LOCAL_SRC_FILES := src/hello-jni.c
 
 LOCAL_MODULE    := NativeLib
+
+include $(BUILD_SHARED_LIBRARY)
+
+#
+# 模块2
+#
+include $(CLEAR_VARS)
+
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/include  \
+                    $(LOCAL_PATH)/src
+
+LOCAL_SRC_FILES := src/hello-jni2.c
+
+LOCAL_MODULE    := NativeLib2
 
 include $(BUILD_SHARED_LIBRARY)
