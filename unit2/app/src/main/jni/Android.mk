@@ -26,7 +26,7 @@ LOCAL_SRC_FILES := src/staticlib.c
 
 LOCAL_MODULE    := StaticLib
 
-include $(BUILD_STATIC_LIBRARY)
+include $(BUILD_SHARED_LIBRARY)
 
 #
 # 目标库
@@ -41,6 +41,24 @@ LOCAL_SRC_FILES := src/hello-jni.c
 
 LOCAL_MODULE    := NativeLib
 
-LOCAL_STATIC_LIBRARIES := StaticLib
+LOCAL_SHARED_LIBRARIES := StaticLib
+
+include $(BUILD_SHARED_LIBRARY)
+
+
+#
+# 目标库
+#
+
+include $(CLEAR_VARS)
+
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/include  \
+                    $(LOCAL_PATH)/src
+
+LOCAL_SRC_FILES := src/hello-jni2.c
+
+LOCAL_MODULE    := NativeLib2
+
+LOCAL_SHARED_LIBRARIES := StaticLib
 
 include $(BUILD_SHARED_LIBRARY)
