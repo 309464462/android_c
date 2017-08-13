@@ -20,7 +20,8 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/include  \
                     $(LOCAL_PATH)/src
 
 LOCAL_SRC_FILES := src/hello-jni.c
-
 LOCAL_MODULE    := NativeLib
+#LOCAL_SHARED_LIBRARIES :=StaticLib
 
 include $(BUILD_SHARED_LIBRARY)
+$(call import-module,test/StaticLib)

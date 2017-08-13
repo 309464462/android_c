@@ -15,6 +15,9 @@ extern "C" {
 JNIEXPORT jstring JNICALL Java_com_example_elvin_unit2_TestJni_stringFromJNI
   (JNIEnv *, jobject);
 
+JNIEXPORT jint JNICALL
+Java_com_example_elvin_unit2_TestJni_intfromJNI(JNIEnv *env, jobject instance);
+
 #ifdef __cplusplus
 }
 #endif
