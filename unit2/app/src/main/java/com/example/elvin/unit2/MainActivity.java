@@ -12,8 +12,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TestJni jni = new TestJni();
+        TestJni2 jni2 = new TestJni2();
         TextView tv = (TextView) findViewById(R.id.tv);
-        tv.setText(jni.stringFromJNI()+jni.intFromJni());
+        tv.setText(jni.stringFromJNI()+jni.intFromJni()+"\n"+jni2.stringFromJNI()+jni2.intFromJni());
 
     }
 }
