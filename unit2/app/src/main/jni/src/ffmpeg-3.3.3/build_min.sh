@@ -2,6 +2,9 @@
 NDK=D:/Androidsdk/ndk-bundle
 SYSROOT=$NDK/platforms/android-19/arch-arm/
 TOOLCHAIN=$NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64
+#EXTRA_LIB 指定刚刚编译的libx264的目录
+#--enable-libx264 --enable-gpl 就是把libx264启用，两个都需要加
+#--extra-cflags --extra-ldflags需要指定编译libx264所生成的头文件的lib文件
 EXTRA_LIB=$(pwd)/android-lib
 function build_one { 
 ./configure \
