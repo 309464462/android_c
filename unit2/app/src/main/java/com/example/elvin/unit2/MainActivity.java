@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
         TestJni jni = new TestJni();
         TextView tv = (TextView) findViewById(R.id.tv);
-        tv.setText(jni.stringFromJNI());
+        tv.setText(jni.stringFromJNI()+jni.intFromJni());
 
     }
 }

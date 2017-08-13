@@ -11,8 +11,6 @@ JNIEXPORT jstring JNICALL Java_com_example_elvin_unit2_TestJni_stringFromJNI
 
 JNIEXPORT jint JNICALL
 Java_com_example_elvin_unit2_TestJni_intFromJni(JNIEnv *env, jobject instance) {
-
-    // TODO
     return getNumber();
 
 }

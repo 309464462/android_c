@@ -13,6 +13,24 @@
 # limitations under the License.
 #
 LOCAL_PATH := $(call my-dir)
+#
+# 第三方库
+#
+
+include $(CLEAR_VARS)
+
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/include  \
+                    $(LOCAL_PATH)/src
+
+LOCAL_SRC_FILES := src/staticlib.c
+
+LOCAL_MODULE    := StaticLib
+
+include $(BUILD_STATIC_LIBRARY)
+
+#
+# 目标库
+#
 
 include $(CLEAR_VARS)
 
@@ -22,5 +40,7 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/include  \
 LOCAL_SRC_FILES := src/hello-jni.c
 
 LOCAL_MODULE    := NativeLib
+
+LOCAL_STATIC_LIBRARIES := StaticLib
 
 include $(BUILD_SHARED_LIBRARY)

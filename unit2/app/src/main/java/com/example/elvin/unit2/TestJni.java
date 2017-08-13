@@ -9,4 +9,5 @@ public class TestJni {
         System.loadLibrary("NativeLib");
     }
     public native String  stringFromJNI();
+    public native int intFromJni();
 }
