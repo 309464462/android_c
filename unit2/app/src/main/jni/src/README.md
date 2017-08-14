@@ -5,6 +5,5 @@
 --disable-ffplay --disable-ffprobe --disable-ffserver 这些都是不需要的工具，当然也可以编译出来看看
 --disable-avdevice 这个库是用来操作一些硬件设备的，如摄像头这些，但Android中感觉不需要它，也可以编译出来试试能不能使用在Android上
 --disable-symver 禁用 symbol versioning
-PREFIX=
-(pwd)/android/
-CPU 指定编译成功的库所在的目录，这个配置是：当前目录下的android目录下的指定的cpu平台目录下
+PREFIX=(pwd)/android/CPU 指定编译成功的库所在的目录，这个配置是：当前目录下的android目录下的指定的cpu平台目录下
+--enable-static --disable-shared这两个是看编译出来的库是静态库(.a)还是动态库(.so),如果要编译成动态库就--enable-shared --disable-static。或者两个都编译出来。

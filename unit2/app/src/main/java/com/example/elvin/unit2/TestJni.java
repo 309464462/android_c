@@ -5,8 +5,5 @@ package com.example.elvin.unit2;
  */
 
 public class TestJni {
-    static {
-        System.loadLibrary("NativeLib");
-    }
-    public native String  stringFromJNI();
+
 }

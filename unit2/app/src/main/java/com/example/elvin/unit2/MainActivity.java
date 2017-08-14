@@ -10,10 +10,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        TestJni jni = new TestJni();
-        TextView tv = (TextView) findViewById(R.id.tv);
-        tv.setText(jni.stringFromJNI());
-
+        TextView textView = (TextView) findViewById(R.id.tv);
+        textView.setText(helloFromFFmpeg());
+    }
+    public native String helloFromFFmpeg();
+    static{
+        System.loadLibrary("live_jni");
     }
 }
