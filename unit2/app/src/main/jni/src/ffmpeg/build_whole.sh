@@ -44,6 +44,7 @@ function build_one {
      make
      make install
  }
+
  CPU=arm
  PREFIX=$(pwd)/android/$CPU
  ADDI_CFLAGS="-marm"
