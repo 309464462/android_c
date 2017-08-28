@@ -18,10 +18,26 @@ JNIEXPORT jstring JNICALL Java_com_example_elvin_unit3_jni_JniTest_strFromJni
 /*
  * Class:     com_example_elvin_unit3_jni_JniTest
  * Method:    testString
- * Signature: (Ljava/lang/String;)V
+ * Signature: (Ljava/lang/String;)Z
  */
 JNIEXPORT jboolean JNICALL Java_com_example_elvin_unit3_jni_JniTest_testString
   (JNIEnv *, jobject, jstring);
+
+/*
+ * Class:     com_example_elvin_unit3_jni_JniTest
+ * Method:    sumNumber
+ * Signature: ([I)I
+ */
+JNIEXPORT jint JNICALL Java_com_example_elvin_unit3_jni_JniTest_sumNumber
+  (JNIEnv *, jobject, jintArray);
+
+/*
+ * Class:     com_example_elvin_unit3_jni_JniTest
+ * Method:    controlPointOfArray
+ * Signature: ([I)V
+ */
+JNIEXPORT jboolean JNICALL Java_com_example_elvin_unit3_jni_JniTest_controlPointOfArray
+  (JNIEnv *, jobject, jintArray,jint);
 
 #ifdef __cplusplus
 }

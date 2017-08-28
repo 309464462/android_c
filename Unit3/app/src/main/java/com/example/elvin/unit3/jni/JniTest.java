@@ -11,5 +11,7 @@ public class JniTest {
 
     public native String strFromJni(String str);
     public native  boolean testString(String  str);
+    public native  int  sumNumber(int[] nums);
+    public native  boolean controlPointOfArray(int[] nums,int length);
 
 }

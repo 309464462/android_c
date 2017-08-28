@@ -36,6 +36,21 @@ public class MainActivity extends AppCompatActivity {
         }else{
             Log.d("jni"," acutual point to jni");
         }
+        //////////////
+        int nums[] = {10,1,2,3,4,5,6,7,8,9};
+//        int result = jni.sumNumber(nums);
+//        Log.d("jni","result:"+result);
+        is = jni.controlPointOfArray(nums,nums.length);
+        if(is){
+            Log.d("jni","is copy to jni");
+        }else{
+            Log.d("jni"," acutual point to jni");
+        }
+        for(int i=0;i<10;i++){
+            Log.d("jni","num["+i+"]:"+nums[i]);
+        }
+
+
     }
 
     @OnClick(R.id.tvTips)
