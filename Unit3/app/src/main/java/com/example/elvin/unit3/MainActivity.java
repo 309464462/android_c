@@ -2,6 +2,7 @@ package com.example.elvin.unit3;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -29,6 +30,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void initview(){
         jni = new JniTest();
+        boolean is = jni.testString("test");
+        if(is){
+            Log.d("jni","is copy to jni");
+        }else{
+            Log.d("jni"," acutual point to jni");
+        }
     }
 
     @OnClick(R.id.tvTips)

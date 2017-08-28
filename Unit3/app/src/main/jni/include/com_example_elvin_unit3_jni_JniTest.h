@@ -15,6 +15,14 @@ extern "C" {
 JNIEXPORT jstring JNICALL Java_com_example_elvin_unit3_jni_JniTest_strFromJni
   (JNIEnv *, jobject, jstring);
 
+/*
+ * Class:     com_example_elvin_unit3_jni_JniTest
+ * Method:    testString
+ * Signature: (Ljava/lang/String;)V
+ */
+JNIEXPORT jboolean JNICALL Java_com_example_elvin_unit3_jni_JniTest_testString
+  (JNIEnv *, jobject, jstring);
+
 #ifdef __cplusplus
 }
 #endif

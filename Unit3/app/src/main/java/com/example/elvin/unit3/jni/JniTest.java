@@ -10,5 +10,6 @@ public class JniTest {
     }
 
     public native String strFromJni(String str);
+    public native  boolean testString(String  str);
 
 }
