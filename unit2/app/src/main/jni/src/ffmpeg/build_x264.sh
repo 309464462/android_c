@@ -34,6 +34,7 @@ function build_one {
      make j4
      make install
  }
+
  CPU=arm
  PREFIX=$(pwd)/android/x264_lib/$CPU
  ADDI_CFLAGS="-marm"

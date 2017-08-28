@@ -17,5 +17,6 @@ function build_one {
      make  j4
      make install
  }
+
 PREFIX=$(pwd)/android-lib/
 build_one
