@@ -17,7 +17,7 @@ public class JniTest {
         return "Instance Method";
     }
 
-    private static String saticMethod(){
+    private static String staticMethod(){
         return "Static Method";
     }
 

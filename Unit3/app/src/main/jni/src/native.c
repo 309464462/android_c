@@ -9,7 +9,19 @@
 JNIEXPORT jstring JNICALL Java_com_example_elvin_unit3_jni_JniTest_strFromJni
           (JNIEnv *env ,jobject thiz, jstring javastring){
 //            return (*env)->NewString(env,"asdf",4);  //这是unicode
-        return (*env)->NewStringUTF(env,"asdf");  //这是utf
+    jclass  clazz = (*env)->GetObjectClass(env,thiz);
+    jmethodID instanceMethodId;
+    instanceMethodId = (*env)->GetMethodID(env,clazz,"instanceMethod","()Ljava/lang/String;");
+    jstring instanceResult;
+    instanceResult = (*env)->CallObjectMethod(env,thiz,instanceMethodId);
+
+    jmethodID staticMethodId;
+    staticMethodId = (*env)->GetStaticMethodID(env,clazz,"staticMethod","()Ljava/lang/String;");
+    jstring staticResult;
+    staticResult = (*env)->CallStaticObjectMethod(env,clazz,staticMethodId);  //这里第二个参数调用的是静态域
+
+//        return (*env)->NewStringUTF(env,"asdf");  //这是utf
+    return staticResult;
   }
 
 JNIEXPORT jboolean JNICALL Java_com_example_elvin_unit3_jni_JniTest_testString
