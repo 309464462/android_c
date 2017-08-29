@@ -41,6 +41,14 @@ JNIEXPORT jboolean JNICALL Java_com_example_elvin_unit3_jni_JniTest_controlPoint
 
 /*
  * Class:     com_example_elvin_unit3_jni_JniTest
+ * Method:    testThrowExecption
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_com_example_elvin_unit3_jni_JniTest_testThrowExecption
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     com_example_elvin_unit3_jni_JniTest
  * Method:    getFiledFromJava
  * Signature: ()Ljava/lang/String;
  */

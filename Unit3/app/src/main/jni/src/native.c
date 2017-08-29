@@ -20,6 +20,7 @@ JNIEXPORT jstring JNICALL Java_com_example_elvin_unit3_jni_JniTest_strFromJni
     jstring staticResult;
     staticResult = (*env)->CallStaticObjectMethod(env,clazz,staticMethodId);  //这里第二个参数调用的是静态域
 
+
 //        return (*env)->NewStringUTF(env,"asdf");  //这是utf
     return staticResult;
   }
@@ -79,5 +80,40 @@ JNIEXPORT jstring JNICALL Java_com_example_elvin_unit3_jni_JniTest_getFiledFromJ
      return instanceField;
 }
 
+JNIEXPORT void JNICALL Java_com_example_elvin_unit3_jni_JniTest_testThrowExecption
+        (JNIEnv *env, jobject thiz){
+    jthrowable ex;
+    jclass clazz;
+    clazz = (*env)->GetObjectClass(env,thiz);
+    jmethodID exceptionMethodId;
+    exceptionMethodId = (*env)->GetStaticMethodID(env,clazz,"testThrowExecption","()V;");
+    (*env)->CallVoidMethod(env,thiz,exceptionMethodId);
+    ex = (*env)->ExceptionOccurred(env);
+    if( 0 != ex ){
+        (*env)->ExceptionClear(env);
+    }
+}
 
+
+void MultiThread(JNIEnv *env, jobject thiz){
+    if(JNI_OK == (*env)->MonitorEnter(env,thiz)){
+        //错误处理
+    }
+
+    //同步代码块
+    if(JNI_OK == (*env)->MonitorExit(env,thiz)){
+        // 错误处理
+    }
+}
+
+
+void jniThread(JNIEnv *env, jobject thiz){
+    JavaVM * cacheJVM;
+
+    //将线程附着到虚拟机
+    (*cacheJVM)->AttachCurrentThread(cacheJVM,&env,NULL);
+    // 可以用JNIENV 接口实现线程与java应用程序之间的通信
+    //将当前线程与虚拟机分离
+    (*cacheJVM)->DetachCurrentThread(cacheJVM);
+}
 

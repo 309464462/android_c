@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.tvTips)
     public void OnClick(View view){
         tvTips.setText(jni.strFromJni(""));
+//        jni.testThrowExecption();
     }
 
 

@@ -21,12 +21,21 @@ public class JniTest {
         return "Static Method";
     }
 
+    //抛出异常
+    private void throwingMethod() throws NullPointerException{
+        throw  new NullPointerException("Null pointer..............................");
+    }
+
     public native String strFromJni(String str);
     public native  boolean testString(String  str);
     public native  int  sumNumber(int[] nums);
     public native  boolean controlPointOfArray(int[] nums,int length);
+    public native  void testThrowExecption();
+
 
     public native String getFiledFromJava();
+
+
 
 
 }
