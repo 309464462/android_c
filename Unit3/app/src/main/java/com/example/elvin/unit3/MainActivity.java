@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
 //        for(int i=0;i<10;i++){
 //            Log.d("jni","num["+i+"]:"+nums[i]);
 //        }
-//        String resString = jni.getFiledFromJava();
-//        Log.d("jni","string:"+resString);
+        String resString = jni.getFiledFromJava();
+        Log.d("jni","string:"+resString);
 
 
     }

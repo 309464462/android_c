@@ -72,10 +72,12 @@ JNIEXPORT jstring JNICALL Java_com_example_elvin_unit3_jni_JniTest_getFiledFromJ
     staticFieldId = (*env)->GetStaticFieldID(env,clazz,"staticFiled","Ljava/lang/String;");
     //获取实例域
     jstring instanceField;
-    instanceField = (*env)->GetObjectField(env,clazz,instanceFieldId);
+    instanceField = (*env)->GetObjectField(env,thiz,instanceFieldId);
     jstring staticField;
     staticField = (*env)->GetStaticObjectField(env,clazz,staticFieldId);
 
-
      return instanceField;
 }
+
+
+
