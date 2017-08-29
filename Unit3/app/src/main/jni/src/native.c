@@ -48,3 +48,22 @@ JNIEXPORT jboolean JNICALL Java_com_example_elvin_unit3_jni_JniTest_controlPoint
     (*env)->ReleaseIntArrayElements(env,intArray,nativeDirectArray,0);
     return isCopy;
 }
+
+JNIEXPORT jstring JNICALL Java_com_example_elvin_unit3_jni_JniTest_getFiledFromJava
+        (JNIEnv *env, jobject thiz){
+    jclass clazz;
+    clazz = (*env)->GetObjectClass(env,thiz);
+    //获取id
+    jfieldID instanceFieldId;
+    instanceFieldId = (*env)->GetFieldID(env,clazz,"instanceFiled","Ljava/lang/String;");
+    jfieldID staticFieldId;
+    staticFieldId = (*env)->GetStaticFieldID(env,clazz,"staticFiled","Ljava/lang/String;");
+    //获取实例域
+    jstring instanceField;
+    instanceField = (*env)->GetObjectField(env,clazz,instanceFieldId);
+    jstring staticField;
+    staticField = (*env)->GetStaticObjectField(env,clazz,staticFieldId);
+
+
+     return instanceField;
+}

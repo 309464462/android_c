@@ -30,25 +30,27 @@ public class MainActivity extends AppCompatActivity {
 
     private void initview(){
         jni = new JniTest();
-        boolean is = jni.testString("test");
-        if(is){
-            Log.d("jni","is copy to jni");
-        }else{
-            Log.d("jni"," acutual point to jni");
-        }
-        //////////////
-        int nums[] = {10,1,2,3,4,5,6,7,8,9};
+//        boolean is = jni.testString("test");
+//        if(is){
+//            Log.d("jni","is copy to jni");
+//        }else{
+//            Log.d("jni"," acutual point to jni");
+//        }
+//        //////////////
+//        int nums[] = {10,1,2,3,4,5,6,7,8,9};
 //        int result = jni.sumNumber(nums);
 //        Log.d("jni","result:"+result);
-        is = jni.controlPointOfArray(nums,nums.length);
-        if(is){
-            Log.d("jni","is copy to jni");
-        }else{
-            Log.d("jni"," acutual point to jni");
-        }
-        for(int i=0;i<10;i++){
-            Log.d("jni","num["+i+"]:"+nums[i]);
-        }
+//        is = jni.controlPointOfArray(nums,nums.length);
+//        if(is){
+//            Log.d("jni","is copy to jni");
+//        }else{
+//            Log.d("jni"," acutual point to jni");
+//        }
+//        for(int i=0;i<10;i++){
+//            Log.d("jni","num["+i+"]:"+nums[i]);
+//        }
+//        String resString = jni.getFiledFromJava();
+//        Log.d("jni","string:"+resString);
 
 
     }
