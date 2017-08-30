@@ -11,5 +11,7 @@ LOCAL_SRC_FILES := src/native.c
 
 LOCAL_MODULE    := native
 
+LOCAL_LDLIBS := -llog
+
 
 include $(BUILD_SHARED_LIBRARY)

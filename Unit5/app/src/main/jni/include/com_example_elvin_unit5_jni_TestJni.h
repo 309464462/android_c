@@ -15,6 +15,8 @@ extern "C" {
 JNIEXPORT void JNICALL Java_com_example_elvin_unit5_jni_TestJni_startToShowLog
   (JNIEnv *, jobject);
 
+void my_log_verbose(const char * format,...);
+
 #ifdef __cplusplus
 }
 #endif
