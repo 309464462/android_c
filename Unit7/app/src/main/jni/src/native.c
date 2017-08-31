@@ -55,7 +55,7 @@ JNIEXPORT void JNICALL Java_com_example_elvin_unit7_jni_JniOperatiton_nativeWork
      for(int i = 0; i < iterrations;i++){
          //准备消息
          char message[26];
-         sprintf(message,"Worker %d: Iteration %d",id,iterrations);
+         sprintf(message,"Worker %d: Iteration %d",id,i);
 
          //来自c字符串的消息
          jstring  messageString = (*env)->NewStringUTF(env,message);
@@ -66,7 +66,8 @@ JNIEXPORT void JNICALL Java_com_example_elvin_unit7_jni_JniOperatiton_nativeWork
          if(NULL != (*env)->ExceptionOccurred(env)){
              break;
          }
-         //睡眠一秒钟
+         //睡眠一秒钟,交出cpu控制权，才会出现轮询效果
          sleep(1);
+
      }
   }

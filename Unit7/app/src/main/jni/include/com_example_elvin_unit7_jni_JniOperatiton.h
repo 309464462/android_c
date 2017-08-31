@@ -29,7 +29,7 @@ JNIEXPORT void JNICALL Java_com_example_elvin_unit7_jni_JniOperatiton_nativeFree
  * Signature: (I)V
  */
 JNIEXPORT void JNICALL Java_com_example_elvin_unit7_jni_JniOperatiton_nativeWorker
-  (JNIEnv *, jobject, jint);
+  (JNIEnv *, jobject, jint,jint);
 
 #ifdef __cplusplus
 }
