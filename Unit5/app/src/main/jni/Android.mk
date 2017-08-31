@@ -11,7 +11,7 @@ LOCAL_SRC_FILES := src/native.c
 
 LOCAL_MODULE    := native
 
-MY_LOG_TAG := \"logtest"
+MY_LOG_TAG := \"logtest\"
 
 # 定义基于构建类型的默认日志等级
 ifeq ($(APP_OPTIIM),release)
