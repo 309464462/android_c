@@ -26,10 +26,18 @@ JNIEXPORT void JNICALL Java_com_example_elvin_unit7_jni_JniOperatiton_nativeFree
 /*
  * Class:     com_example_elvin_unit7_jni_JniOperatiton
  * Method:    nativeWorker
- * Signature: (I)V
+ * Signature: (II)V
  */
 JNIEXPORT void JNICALL Java_com_example_elvin_unit7_jni_JniOperatiton_nativeWorker
-  (JNIEnv *, jobject, jint,jint);
+  (JNIEnv *, jobject, jint, jint);
+
+/*
+ * Class:     com_example_elvin_unit7_jni_JniOperatiton
+ * Method:    posixThreads
+ * Signature: (II)V
+ */
+JNIEXPORT void JNICALL Java_com_example_elvin_unit7_jni_JniOperatiton_posixThreads
+  (JNIEnv *, jobject, jint, jint);
 
 #ifdef __cplusplus
 }
