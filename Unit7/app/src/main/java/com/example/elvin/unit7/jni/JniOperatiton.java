@@ -31,4 +31,5 @@ public class JniOperatiton {
     public native void nativeInt();
     public native void nativeFree();
     public native void nativeWorker(int id,int iterrations);
+    public native void posixThreads(int threads,int iterations);
 }

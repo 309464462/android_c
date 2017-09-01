@@ -90,7 +90,10 @@ public class MainActivity extends AppCompatActivity {
     * 这种方法的主要优点是不要原生代码做任何修改
     * */
     private void startThreads(int threads,final  int iteration) {
-        javaThread(threads,iteration);
+        //在java代码中创建线程，那么原生代码就不用发生改变
+//        javaThread(threads,iteration);
+        //在原生代码中创建线程
+        jni.posixThreads(threads,iteration);
     }
 
     private void javaThread(int threads,final int iterations){
