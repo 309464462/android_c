@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.elvino.unit8.MainActivity">
+    <EditText
+        android:id="@+id/ip_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ip" >
+
+        <requestFocus />
+
+    </EditText>
 
     <EditText
         android:id="@+id/etPort"
@@ -13,6 +22,11 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:hint="port"/>
+    <EditText
+        android:id="@+id/message_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="message" />
     <Button
         android:id="@+id/btnStart"
         android:layout_width="match_parent"

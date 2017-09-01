@@ -7,7 +7,7 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/include  \
 
 LOCAL_SRC_FILES := src/native.cpp
 
-LOCAL_MODULE    := native
+LOCAL_MODULE    := Echo
 
 MY_LOG_TAG := \"logtest\"
 
