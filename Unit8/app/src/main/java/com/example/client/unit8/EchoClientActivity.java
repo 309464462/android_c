@@ -99,8 +99,8 @@ public class EchoClientActivity extends AbstractEchoActivity {
             logMessage("Starting client.");
 
             try {
-                 nativeStartTcpClient(ip, port, message);
-//                nativeStartUdpClient(ip, port, message);
+//                 nativeStartTcpClient(ip, port, message);
+                nativeStartUdpClient(ip, port, message);
             } catch (Throwable e) {
                 logMessage(e.getMessage());
             }
