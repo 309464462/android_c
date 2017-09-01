@@ -15,6 +15,8 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
+ *
+ * 虚拟机的一般ip是[net.gprs.local-ip]: [10.0.2.15]
  * Created by elvin on 2017/9/1.
  */
 
