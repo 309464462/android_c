@@ -51,8 +51,8 @@ public class MainActivity extends AbstractEchoActivity {
             logMessage("Starting server.");
 
             try {
-                 nativeStartTcpServer(port);
-//                nativeStartUdpServer(port);
+//                 nativeStartTcpServer(port);
+                nativeStartUdpServer(port);
             } catch (Exception e) {
                 logMessage(e.getMessage());
             }
