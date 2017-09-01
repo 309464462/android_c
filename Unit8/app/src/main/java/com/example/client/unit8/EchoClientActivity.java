@@ -1,4 +1,4 @@
-package com.example.elvin.unit8;
+package com.example.client.unit8;
 
 import android.os.Bundle;
 import android.widget.EditText;
@@ -6,7 +6,7 @@ import android.widget.EditText;
 import butterknife.BindView;
 
 /**
- * Created by elvin on 2017/9/1.
+ * Created by client on 2017/9/1.
  */
 
 public class EchoClientActivity extends AbstractEchoActivity {

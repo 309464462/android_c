@@ -1,4 +1,4 @@
-package com.example.elvin.unit8;
+package com.example.client.unit8;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
