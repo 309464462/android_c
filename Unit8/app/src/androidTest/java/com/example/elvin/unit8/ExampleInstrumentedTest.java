@@ -1,4 +1,4 @@
-package com.example.elvino.unit8;
+package com.example.elvin.unit8;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.elvino.unit8", appContext.getPackageName());
+        assertEquals("com.example.elvin.unit8", appContext.getPackageName());
     }
 }

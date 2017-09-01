@@ -1,4 +1,4 @@
-package com.example.elvino.unit8;
+package com.example.elvin.unit8;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -15,7 +15,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * Created by elvino on 2017/9/1.
+ * Created by elvin on 2017/9/1.
  */
 
 public abstract class AbstractEchoActivity extends AppCompatActivity {

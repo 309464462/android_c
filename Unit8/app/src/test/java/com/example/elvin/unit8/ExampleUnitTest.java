@@ -1,4 +1,4 @@
-package com.example.elvino.unit8;
+package com.example.elvin.unit8;
 
 import org.junit.Test;
 

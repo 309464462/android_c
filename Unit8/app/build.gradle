@@ -5,7 +5,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "26.0.1"
     defaultConfig {
-        applicationId "com.example.elvino.unit8"
+        applicationId "com.example.elvin.unit8"
         minSdkVersion 19
         targetSdkVersion 25
         versionCode 1

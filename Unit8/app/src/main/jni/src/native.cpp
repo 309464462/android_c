@@ -386,7 +386,7 @@ static ssize_t SendToSocket(
 }
 
 
-void Java_com_example_elvino_unit8_MainActivity_nativeStartTcpServer(
+void Java_com_example_elvin_unit8_MainActivity_nativeStartTcpServer(
         JNIEnv* env,
         jobject obj,
         jint port)
@@ -503,7 +503,7 @@ static void ConnectToAddress(
 }
 
 
-void Java_com_example_elvino_unit8_EchoClientActivity_nativeStartTcpClient(
+void Java_com_example_elvin_unit8_EchoClientActivity_nativeStartTcpClient(
         JNIEnv* env,
         jobject obj,
         jstring ip,
