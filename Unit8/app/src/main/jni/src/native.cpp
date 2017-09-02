@@ -35,6 +35,7 @@
 // offsetof
 #include <stddef.h>
 
+
 // Max log message length
 #define MAX_LOG_MESSAGE_LENGTH 256
 
